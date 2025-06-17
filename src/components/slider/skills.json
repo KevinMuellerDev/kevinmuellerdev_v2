@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/angular.svg",
+    "name": "Angular"
+  },
+  {
+    "path": "/react.svg",
+    "name": "React"
+  },
+  {
+    "path": "/typescript.svg",
+    "name": "TypeScript"
+  },
+  {
+    "path": "/javascript.svg",
+    "name": "JavaScript"
+  },
+  {
+    "path": "/html.svg",
+    "name": "HTML"
+  },
+  {
+    "path": "/css.svg",
+    "name": "CSS"
+  },
+  {
+    "path": "/django.svg",
+    "name": "Django"
+  },
+  {
+    "path": "/python.svg",
+    "name": "Python"
+  },
+  {
+    "path": "/redis.png",
+    "name": "Redis"
+  },
+  {
+    "path": "/docker.svg",
+    "name": "Docker"
+  },
+  {
+    "path": "/postgres.svg",
+    "name": "PostgreSQL"
+  },
+  {
+    "path": "/git.svg",
+    "name": "Git"
+  },
+  {
+    "path": "/restapi.svg",
+    "name": "REST-API"
+  },
+  {
+    "path": "/firebase.svg",
+    "name": "Firebase"
+  }
+]

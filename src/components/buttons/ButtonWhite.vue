@@ -15,28 +15,28 @@ const props = defineProps(['text'])
     align-items: center;
     gap: 8px;
     padding: 0.5rem 1.25rem;
-    color: var(--kmd-c-text-light);
+    color: var(--kmd-c-background);
     font-weight: 600;
     border: 1px solid var(--kmd-c-divider-full);
     cursor: pointer;
     border-radius: 3px;
     transition: all 0.5s ease;
-    background: linear-gradient(to left, transparent 50%, var(--kmd-c-button-light) 50%) right;
+    background: linear-gradient(to right, var(--kmd-c-button-light) 50%, transparent 50%) left;
     background-size: 200% 100%;
     user-select: none;
     -webkit-user-select: none;
 
     &:hover {
-        color: var(--kmd-c-background);
-        background-position: left;
+        color: var(--kmd-c-text-light);
+        background-position: right;
 
         .arrow {
-            background-image: url('@/components/icons/arrow-dark.png');
+            background-image: url('@/components/icons/arrow-light.png');
         }
     }
 
     .arrow {
-        background-image: url('@/components/icons/arrow-light.png');
+        background-image: url('@/components/icons/arrow-dark.png');
         width: 16px;
         object-fit: cover;
         height: 13px;
