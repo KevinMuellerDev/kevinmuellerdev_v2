@@ -1,5 +1,9 @@
 [
   {
+    "path": "/vue.svg",
+    "name": "Vue.js"
+  },
+  {
     "path": "/angular.svg",
     "name": "Angular"
   },

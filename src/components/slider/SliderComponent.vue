@@ -24,7 +24,7 @@ const skills = skillData
 .skills-container {
     position: absolute;
     left: 0;
-    bottom: -24px;
+    bottom: -32px;
     overflow: hidden;
     width: 100%;
     z-index: 100;
@@ -58,6 +58,7 @@ const skills = skillData
 
 
                 img {
+                    max-height: 100px;
                     min-height: 60px;
                     margin: 0 42px;
                     padding: 1rem 0;
