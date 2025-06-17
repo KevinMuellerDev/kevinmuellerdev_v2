@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+
+import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
+
 const { t } = useI18n()
+
+const handleContact = () => {
+  console.log('clicked')
+}
 </script>
 
 <template>
@@ -15,7 +22,7 @@ const { t } = useI18n()
         <RouterLink>{{ t('navbar.testimonials') }}</RouterLink>
       </nav>
     </div>
-
+    <ButtonTransparent :text="'Contact Me'" @click="handleContact" />
   </header>
 </template>
 
@@ -27,6 +34,7 @@ header {
   max-width: 1440px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   .header-left {
     display: flex;

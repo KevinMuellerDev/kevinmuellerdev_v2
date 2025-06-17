@@ -12,10 +12,14 @@ html {
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: var(--kmd-c-text-light);
+  color: var(--kmd-c-text-dark);
   transition: 0.4s;
   padding: 3px;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--kmd-c-text-light);
+  }
 }
