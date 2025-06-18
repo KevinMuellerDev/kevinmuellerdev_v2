@@ -16,10 +16,10 @@ const handleContact = () => {
     <div class="header-left">
       <img class="" src="../../assets/images/kevin.svg" alt="">
       <nav>
-        <RouterLink>{{ t('navbar.about') }}</RouterLink>
-        <RouterLink>{{ t('navbar.expertise') }}</RouterLink>
-        <RouterLink>{{ t('navbar.portfolio') }}</RouterLink>
-        <RouterLink>{{ t('navbar.testimonials') }}</RouterLink>
+        <RouterLink class="nav-link">{{ t('navbar.about') }}</RouterLink>
+        <RouterLink class="nav-link">{{ t('navbar.expertise') }}</RouterLink>
+        <RouterLink class="nav-link">{{ t('navbar.portfolio') }}</RouterLink>
+        <RouterLink class="nav-link">{{ t('navbar.testimonials') }}</RouterLink>
       </nav>
     </div>
     <ButtonTransparent :text="'Contact Me'" @click="handleContact" />

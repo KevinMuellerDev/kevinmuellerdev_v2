@@ -24,7 +24,7 @@ const skills = skillData
 .skills-container {
     position: absolute;
     left: 0;
-    bottom: -32px;
+    bottom: -2rem;
     overflow: hidden;
     width: 100%;
     z-index: 100;
@@ -53,14 +53,15 @@ const skills = skillData
                     user-select: none;
                     -webkit-user-select: none;
                     -moz-user-select: none;
-                    font-weight: 500;
+                    font: 400 1rem roboto;
+
                 }
 
 
                 img {
-                    max-height: 100px;
-                    min-height: 60px;
-                    margin: 0 42px;
+                    max-height: 6.25rem;
+                    min-height: 3.75rem;
+                    margin: 0 2.625rem;
                     padding: 1rem 0;
                     transition: transform 200ms ease;
 

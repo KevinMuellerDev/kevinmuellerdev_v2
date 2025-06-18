@@ -17,7 +17,7 @@ a {
   color: var(--kmd-c-text-dark);
   transition: 0.4s;
   padding: 3px;
-  font-weight: 500;
+  font: 400 1rem roboto;
 
   &:hover {
     color: var(--kmd-c-text-light);

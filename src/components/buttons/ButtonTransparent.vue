@@ -16,7 +16,7 @@ const props = defineProps(['text'])
     gap: 8px;
     padding: 0.5rem 1.25rem;
     color: var(--kmd-c-text-light);
-    font-weight: 600;
+    font: 500 1rem Inter;
     border: 1px solid var(--kmd-c-divider-full);
     cursor: pointer;
     border-radius: 3px;
