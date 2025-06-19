@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import SliderComponent from '@/components/slider/SliderComponent.vue'
+import HeroHighlightComponent from '@/components/hero/herohighlight/HeroHighlightComponent.vue'
 </script>
 
 <template>
     <section>
+        <HeroHighlightComponent />
         <SliderComponent />
     </section>
 </template>
@@ -13,7 +15,10 @@ section {
     position: relative;
     background: url('@/assets/images/dummyheader.png');
     width: 100%;
-    height: 800px;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &::after {
         content: "";

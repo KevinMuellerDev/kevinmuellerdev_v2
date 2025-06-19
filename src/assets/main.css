@@ -4,6 +4,7 @@ html {
   margin: 0;
   min-height: 1lvh;
   background-color: var(--kmd-c-background);
+  font-size: 100%;
 }
 
 #app {
@@ -14,12 +15,23 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--kmd-c-text-dark);
+  color: var(--kmd-c-text-light-opacity-60);
   transition: 0.4s;
   padding: 3px;
   font: 400 1rem roboto;
 
   &:hover {
     color: var(--kmd-c-text-light);
+  }
+}
+
+span {
+  font: 400 1rem roboto;
+  color: var(--kmd-c-text-light-opacity-60);
+}
+
+@media (width <1150px) {
+  html {
+    font-size: 50% !important;
   }
 }

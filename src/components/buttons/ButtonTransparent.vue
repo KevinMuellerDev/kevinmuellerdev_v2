@@ -13,7 +13,7 @@ const props = defineProps(['text'])
 .btn-transparent {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     padding: 0.5rem 1.25rem;
     color: var(--kmd-c-text-light);
     font: 500 1rem Inter;
@@ -37,9 +37,9 @@ const props = defineProps(['text'])
 
     .arrow {
         background-image: url('@/components/icons/arrow-light.png');
-        width: 16px;
+        width: 1rem;
         object-fit: cover;
-        height: 13px;
+        height: 0.8125rem;
         transition: all 0.5s ease;
     }
 }

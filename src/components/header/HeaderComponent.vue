@@ -22,7 +22,7 @@ const handleContact = () => {
         <RouterLink class="nav-link">{{ t('navbar.testimonials') }}</RouterLink>
       </nav>
     </div>
-    <ButtonTransparent :text="'Contact Me'" @click="handleContact" />
+    <ButtonTransparent :text="t('button.contactme')" @click="handleContact" />
   </header>
 </template>
 
@@ -33,7 +33,8 @@ header {
   width: 100%;
   max-width: 1440px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 130px;
   align-items: center;
   z-index: 1;
 
@@ -44,7 +45,6 @@ header {
     nav {
       display: flex;
       gap: 50px;
-      color: var(--kmd-c-);
     }
   }
 

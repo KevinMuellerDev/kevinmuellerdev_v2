@@ -63,7 +63,7 @@ const skills = skillData
                     min-height: 3.75rem;
                     margin: 0 2.625rem;
                     padding: 1rem 0;
-                    transition: transform 200ms ease;
+                    transition: transform 275ms ease;
 
                     &:hover {
                         transform: scale(1.3);
