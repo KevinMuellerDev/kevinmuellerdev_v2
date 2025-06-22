@@ -37,9 +37,9 @@ const props = defineProps(['text'])
 
     .arrow {
         background-image: url('@/components/icons/arrow-light.png');
-        width: 1rem;
+        width: 16px;
         object-fit: cover;
-        height: 0.8125rem;
+        height: 13px;
         transition: all 0.5s ease;
     }
 }
