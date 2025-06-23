@@ -69,7 +69,7 @@ section {
         .expertise-container-item {
             display: flex;
             align-items: stretch;
-            justify-content: stretch;
+            justify-content: center;
             gap: 2.5rem;
             padding: 1.25rem;
             border: 0.5px solid var(--kmd-c-border);
@@ -103,6 +103,26 @@ section {
                 }
             }
         }
+    }
+}
+
+@media(width<860px) {
+    .expertise-grid-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 1.5rem !important;
+        padding: 20px 20px;
+
+        .expertise-container-item {
+            flex-direction: column;
+            align-items: center !important;
+            max-height: 450px !important;
+            height: 100% !important;
+
+            div {
+                gap: 1rem;
+            }
+        }
+
     }
 }
 </style>

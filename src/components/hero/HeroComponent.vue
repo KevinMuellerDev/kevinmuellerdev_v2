@@ -14,6 +14,8 @@ import HeroHighlightComponent from '@/components/hero/herohighlight/HeroHighligh
 section {
     position: relative;
     background: url('@/assets/images/dummyheader.png');
+    background-attachment: fixed;
+    background-size: cover;
     width: 100%;
     height: 50rem;
     display: flex;

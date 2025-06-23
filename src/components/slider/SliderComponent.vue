@@ -1,17 +1,18 @@
 <script setup lang="ts">
+import type { Skills } from '@/types/skills';
 import skillData from './skills.json'
-const skills = skillData
+const skills: Skills[] = skillData
 </script>
 
 <template>
     <div class="skills-container">
         <div class="skills-slider">
             <div class="skills-track">
-                <div v-for="skill in skills" :key="skill">
+                <div v-for="skill in skills" :key="skill.name">
                     <img :src="skill.path" alt="skill logo" />
                     <span>{{ skill.name }}</span>
                 </div>
-                <div v-for="skill in skills" :key="'loop-' + skill">
+                <div v-for="skill in skills" :key="'loop-' + skill.name">
                     <img :src="skill.path" alt="logo duplicate" />
                     <span>{{ skill.name }}</span>
                 </div>
