@@ -28,6 +28,7 @@ const { t } = useI18n()
     display: flex;
     flex-direction: column;
     gap: 61px;
+    transition: all 0.5s ease;
 
     .highlight-text-container {
         display: flex;

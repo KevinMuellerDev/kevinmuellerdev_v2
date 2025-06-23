@@ -1,20 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+</script>
+
 <template>
-    <section>
+    <section id="aboutme">
         <img src="../../assets/images/about-logo.svg" alt="KevinMuellerDev-Logo">
         <div class="about-text-container">
             <div class="about-text-subcontainer">
-                <span>ABOUT ME</span>
-                <h3>A Passionate <br> Fullstack Developer</h3>
+                <span>{{ t('aboutme.about') }}</span>
+                <h3>{{ t('aboutme.headline1') }}<br>{{ t('aboutme.headline2') }}</h3>
             </div>
-            <span>I'm Kevin, a seasoned creative Fullstack Developer dedicated to transforming ideas into Reality. With
-                my
-                experience, I have honed my skills to deliver innovative and captivating Websites and Webapps that leave
-                a lasting impression. Let's collaborate
-                and bring your brand's story to life..</span>
+            <span>{{ t('aboutme.slogan') }}</span>
         </div>
     </section>
 </template>
+
 <style scoped lang="scss">
 section {
     height: 50rem;
@@ -23,6 +24,11 @@ section {
     align-items: center;
     justify-content: center;
     gap: 3.125rem;
+    transition: all 0.5s ease;
+
+    img {
+        max-width: 35.625rem;
+    }
 
     .about-text-container {
         max-width: 40rem;

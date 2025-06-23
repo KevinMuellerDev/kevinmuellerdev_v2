@@ -19,6 +19,8 @@ a {
   transition: 0.4s;
   padding: 3px;
   font: 400 1rem roboto;
+  user-select: none;
+  cursor: pointer;
 
   &:hover {
     color: var(--kmd-c-text-light);
@@ -32,6 +34,6 @@ span {
 
 @media (width <1150px) {
   html {
-    font-size: 50% !important;
+    font-size: 80% !important;
   }
 }

@@ -18,17 +18,27 @@
   },
   "aboutme": {
     "about": "ABOUT ME",
-    "headline": "A Passionate Fullstack Developer",
+    "headline1": "A Passionate ",
+    "headline2": "Fullstack Developer",
     "slogan": "I'm Kevin, a seasoned creative Fullstack Developer dedicated to transforming ideas into Reality. With my experience, I have honed my skills to deliver innovative and captivating Websites and Webapps that leave a lasting impression. Let's collaborate and bring your brand's story to life.."
   },
   "expertise": {
+    "headline": "Expertise",
     "frontend": {
       "headline": "Frontend Development",
-      "text": "lorem ipsum lorem project ipsum"
+      "text": "Building modern, responsive user interfaces using frameworks like Vue.js, React, and Angular. Focus on component-based architecture, reusability, performance optimization, and engaging design with TypeScript, HTML, and CSS."
     },
     "backend": {
       "headline": "Backend Development",
-      "text": "lorem ipsum lorem project ipsum"
+      "text": "Building scalable server applications with Python and Django. Focus on business logic, user management, data processing, and integration with relational and NoSQL databases like PostgreSQL and Redis."
+    },
+    "api": {
+      "headline": "API Design & Integration",
+      "text": "Designing and implementing RESTful APIs for efficient data communication between frontend and backend. Integration of third-party APIs and secure data exchange using standards like HTTPS and JWT."
+    },
+    "deployment": {
+      "headline": "Deployment & Hosting",
+      "text": "Deployment and hosting of web applications using Docker, Git, and classic setups with Gunicorn and Nginx. Experienced in configuring production environments, reverse proxies, and deploying performant full-stack applications."
     }
   },
   "portfolio": {
