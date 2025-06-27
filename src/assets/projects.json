@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Videoflix",
+    "stack": "React | Typescript | Python | Django | Django Rest Framework | Redis | PostgreSQL | Docker",
+    "description": "portfolio.videoflix.text",
+    "image": "portfolio/videoflix.webp",
+    "liveUrl": "http://videoflix.kevin-mueller-dev.de/",
+    "githubUrl": "https://github.com/KevinMuellerDev/videoflix_frontend",
+    "githubUrl2": "https://github.com/KevinMuellerDev/videoflix_backend"
+  },
+  {
+    "title": "DA Bubble",
+    "stack": "Angular | Typescript | SASS | Firebase ",
+    "description": "portfolio.dabubble.text",
+    "image": "portfolio/dabubble.webp",
+    "liveUrl": "http://dabubble.kevin-mueller-dev.de/",
+    "githubUrl": "https://github.com/KevinMuellerDev/da-bubble"
+  },
+  {
+    "title": "Coderr Backend",
+    "stack": "Python | Django | Django Rest Framework",
+    "description": "portfolio.coderr.text",
+    "image": "portfolio/coderr.webp",
+    "liveUrl": "http://coderr.kevin-mueller-dev.de/",
+    "githubUrl": "https://github.com/KevinMuellerDev/coderr_backend"
+  },
+  {
+    "title": "Join",
+    "stack": "JavaScript | HTML | CSS | Django | Django Rest Framework",
+    "description": "portfolio.join.text",
+    "image": "portfolio/join.webp",
+    "liveUrl": "http://join.kevin-mueller-dev.de/",
+    "githubUrl": "https://github.com/KevinMuellerDev/join-Kanban",
+    "githubUrl2": "https://github.com/KevinMuellerDev/join_backend"
+  },
+  {
+    "title": "Halloween Madness",
+    "stack": "JavaScript | HTML | CSS",
+    "description": "portfolio.halloween.text",
+    "image": "portfolio/halloween.webp",
+    "liveUrl": "http://halloween-madness.kevin-mueller-dev.de/",
+    "githubUrl": "https://github.com/KevinMuellerDev/halloween-madness"
+  }
+]

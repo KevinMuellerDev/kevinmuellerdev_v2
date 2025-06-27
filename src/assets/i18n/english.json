@@ -42,10 +42,24 @@
     }
   },
   "portfolio": {
-    "project1": {
-      "stack": "Vue.js, Django ...",
-      "headline": "headline",
-      "text": "text"
+    "header": {
+      "headline": "My Projects",
+      "cta": "Check out more portfolio i've worked on"
+    },
+    "videoflix": {
+      "text": "VideoFlix is a modern Next.js, Django-Rest-Framework application that powers the user interface of a Netflix-style platform. It features user authentication (sign up, login, password reset), an organized video library with autoplay trailers, and adaptive HLS streaming with fullscreen support."
+    },
+    "dabubble": {
+      "text": "A Slack clone with various functions such as: Login, real-time chat, file uploads, channel creation and changing user data. The backend of this project is firebase"
+    },
+    "coderr": {
+      "text": "A backend for a service booking website. Here it is possible to register as a business or customer user to book or offer services. With the option to filter for services and manage them as a business user."
+    },
+    "join": {
+      "text": "Task manager inspired by the Kanban System. Create and organize task using drag and drop functions, assign users and categories. Gets data from a Django REST-API made with Django-Rest-Framework"
+    },
+    "halloween": {
+      "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Maddy to find coins and arcane orbs to fight against the zombies !"
     }
   }
 }

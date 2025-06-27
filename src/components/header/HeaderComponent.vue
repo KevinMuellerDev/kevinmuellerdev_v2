@@ -20,12 +20,18 @@ const scrollToSection = (id: string) => {
 <template>
   <header>
     <div class="header-left">
-      <img class="" src="../../assets/images/kevin.svg" alt="logo">
+      <img class="" src="../../assets/images/kevin.svg" alt="logo" />
       <nav>
         <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
-        <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{ t('navbar.expertise') }}</a>
-        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.portfolio') }}</a>
-        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.testimonials') }}</a>
+        <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{
+          t('navbar.expertise')
+        }}</a>
+        <a @click.prevent="scrollToSection('portfolio')" class="nav-link">{{
+          t('navbar.portfolio')
+        }}</a>
+        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
+          t('navbar.testimonials')
+        }}</a>
       </nav>
     </div>
     <ButtonTransparent :text="t('button.contactme')" @click="handleContact" />
@@ -53,6 +59,5 @@ header {
       gap: 3.125rem;
     }
   }
-
 }
 </style>

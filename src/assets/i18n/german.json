@@ -1,41 +1,41 @@
 {
-    "navbar": {
-        "about": "ABOUT ME",
-        "expertise": "EXPERTISE",
-        "portfolio": "PORTFOLIO",
-        "testimonials": "TESTMINONIAL"
+  "navbar": {
+    "about": "ABOUT ME",
+    "expertise": "EXPERTISE",
+    "portfolio": "PORTFOLIO",
+    "testimonials": "TESTMINONIAL"
+  },
+  "button": {
+    "contactme": "Contact Me",
+    "explore": "Explore my Portfolio",
+    "hire": "Hire Me",
+    "viewmore": "View More",
+    "subscribe": "Subscribe"
+  },
+  "landing": {
+    "profession": "FULLSTACK DEVELOPER",
+    "slogan": "lorem ipsum lorem ipsum lorem lorem ipsum"
+  },
+  "aboutme": {
+    "about": "ABOUT ME",
+    "headline": "A Passionate Fullstack Developer",
+    "slogan": "I'm Kevin, a seasoned creative Fullstack Developer dedicated to transforming ideas into Reality. With my experience, I have honed my skills to deliver innovative and captivating Websites and Webapps that leave a lasting impression. Let's collaborate and bring your brand's story to life.."
+  },
+  "expertise": {
+    "frontend": {
+      "headline": "Frontend Development",
+      "text": "lorem ipsum lorem project ipsum"
     },
-    "button": {
-        "contactme": "Contact Me",
-        "explore": "Explore my Portfolio",
-        "hire": "Hire Me",
-        "viewmore": "View More",
-        "subscribe": "Subscribe"
-    },
-    "landing": {
-        "profession": "FULLSTACK DEVELOPER",
-        "slogan": "lorem ipsum lorem ipsum lorem lorem ipsum"
-    },
-    "aboutme": {
-        "about": "ABOUT ME",
-        "headline": "A Passionate Fullstack Developer",
-        "slogan": "I'm Kevin, a seasoned creative Fullstack Developer dedicated to transforming ideas into Reality. With my experience, I have honed my skills to deliver innovative and captivating Websites and Webapps that leave a lasting impression. Let's collaborate and bring your brand's story to life.."
-    },
-    "expertise": {
-        "frontend": {
-            "headline": "Frontend Development",
-            "text": "lorem ipsum lorem project ipsum"
-        },
-        "backend": {
-            "headline": "Backend Development",
-            "text": "lorem ipsum lorem project ipsum"
-        }
-    },
-    "portfolio": {
-        "project1": {
-            "stack": "Vue.js, Django ...",
-            "headline": "headline",
-            "text": "text"
-        }
+    "backend": {
+      "headline": "Backend Development",
+      "text": "lorem ipsum lorem project ipsum"
     }
+  },
+  "portfolio": {
+    "project1": {
+      "stack": "Vue.js, Django ...",
+      "headline": "headline",
+      "text": "text"
+    }
+  }
 }
