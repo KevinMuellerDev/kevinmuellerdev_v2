@@ -8,13 +8,17 @@ const skills: Skills[] = skillData
     <div class="skills-container">
         <div class="skills-slider">
             <div class="skills-track">
-                <div v-for="skill in skills" :key="skill.name">
-                    <img :src="skill.path" alt="skill logo" />
-                    <span>{{ skill.name }}</span>
+                <div v-for="skill in skills" :key="skill.name" class="skill-item">
+                    <div class="skill-inner">
+                        <img :src="skill.path" alt="skill logo" />
+                        <span>{{ skill.name }}</span>
+                    </div>
                 </div>
-                <div v-for="skill in skills" :key="'loop-' + skill.name">
-                    <img :src="skill.path" alt="logo duplicate" />
-                    <span>{{ skill.name }}</span>
+                <div v-for="skill in skills" :key="'loop-' + skill.name" class="skill-item">
+                    <div class="skill-inner">
+                        <img :src="skill.path" alt="logo duplicate" />
+                        <span>{{ skill.name }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,44 +44,49 @@ const skills: Skills[] = skillData
             width: max-content;
             animation: scroll 30s linear infinite;
             align-items: center;
-
-            div {
+            
+            .skill-item {
+                flex: 0 0 auto;
+                width: 8rem; // or whatever width you want per skill block
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem 2rem;
+                overflow: hidden; // prevent scaled content from overflowing
+                position: relative;
+            
+                .skill-inner {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                position: relative;
-
-
-                span {
-                    color: transparent;
-                    transition: all 200ms ease-in-out;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    font: 400 1rem roboto;
-
+                transition: transform 275ms ease;
+            
+                    img {
+                        max-height: 6.25rem;
+                        min-height: 3.75rem;
+                        transition: transform 275ms ease;
+                    }
+                
+                    span {
+                        color: transparent;
+                        transition: all 200ms ease-in-out;
+                        font: 400 0.9rem roboto;
+                        user-select: none;
+                    }
                 }
-
-
-                img {
-                    max-height: 6.25rem;
-                    min-height: 3.75rem;
-                    margin: 0 2.625rem;
-                    padding: 1rem 0;
-                    transition: transform 275ms ease;
-
-                    &:hover {
-                        transform: scale(1.3);
-                    }
-
-                    &:hover~span {
-                        color: var(--kmd-c-text-light);
-                    }
+            
+                &:hover .skill-inner {
+                    transform: scale(1.2);
+                }
+            
+                &:hover span {
+                    color: var(--kmd-c-text-light);
                 }
             }
-
-
+            
         }
+
     }
 }
 
