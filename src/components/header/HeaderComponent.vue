@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-
 import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
+import HeaderMobileComponent from './header-mobile/HeaderMobileComponent.vue'
 
 const { t } = useI18n()
 
@@ -21,7 +21,7 @@ const scrollToSection = (id: string) => {
   <header>
     <div class="header-left">
       <img class="" src="../../assets/images/kevin.svg" alt="logo" />
-      <nav>
+      <nav class="nav-desktop">
         <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
         <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{
           t('navbar.expertise')
@@ -34,7 +34,8 @@ const scrollToSection = (id: string) => {
         }}</a>
       </nav>
     </div>
-    <ButtonTransparent :text="t('button.contactme')" @click="handleContact" />
+    <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="handleContact" />
+    <HeaderMobileComponent class="nav-mobile" />
   </header>
 </template>
 
@@ -42,6 +43,7 @@ const scrollToSection = (id: string) => {
 header {
   position: absolute;
   top: 1.75rem;
+  min-height: 38px;
   width: 100%;
   max-width: 1440px;
   display: flex;
@@ -54,10 +56,16 @@ header {
     display: flex;
     gap: 3.75rem;
 
-    nav {
+    .nav-desktop {
       display: flex;
       gap: 3.125rem;
     }
+  }
+}
+
+@media (width<1150px) {
+  .nav-desktop {
+    display: none !important;
   }
 }
 </style>

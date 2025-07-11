@@ -28,7 +28,7 @@ section {
     position: absolute;
     bottom: 0;
     height: 200px;
-    z-index: 10;
+    transition: all 400ms ease;
     width: 100%;
     background: linear-gradient(
       0deg,

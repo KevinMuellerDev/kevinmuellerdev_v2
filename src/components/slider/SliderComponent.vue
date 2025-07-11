@@ -5,7 +5,7 @@ const skills: Skills[] = skillData
 </script>
 
 <template>
-  <div class="skills-container">
+  <div class="skills-container" id="slider">
     <div class="skills-slider">
       <div class="skills-track">
         <div v-for="skill in skills" :key="skill.name" class="skill-item">
@@ -32,8 +32,9 @@ const skills: Skills[] = skillData
   bottom: -2rem;
   overflow: hidden;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   padding: 1rem 0;
+  transition: all 300ms ease;
 
   .skills-slider {
     width: 100%;
