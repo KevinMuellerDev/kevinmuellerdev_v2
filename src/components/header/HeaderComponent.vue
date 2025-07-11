@@ -35,7 +35,7 @@ const scrollToSection = (id: string) => {
       </nav>
     </div>
     <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="handleContact" />
-    <HeaderMobileComponent class="nav-mobile" />
+    <HeaderMobileComponent />
   </header>
 </template>
 
@@ -66,6 +66,10 @@ header {
 @media (width<1150px) {
   .nav-desktop {
     display: none !important;
+  }
+
+  header {
+    padding: 0 2.125rem !important;
   }
 }
 </style>

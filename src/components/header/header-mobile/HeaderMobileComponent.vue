@@ -24,15 +24,20 @@ const toggleNavIcon = () => {
     allowCloseAnimation.value = true
     document.getElementById('slider')!.style.zIndex = '0'
     document.getElementById('mobile-menu')!.style.display = 'flex'
-    document.getElementById('nav-icon4')!.style.position='fixed'
+    document.getElementById('nav-icon4')!.style.position = 'fixed'
   } else {
     document.getElementById('slider')!.style.zIndex = '10'
     document.getElementById('mobile-menu')!.style.display = 'none'
-    document.getElementById('nav-icon4')!.style.position='absolute'
+    document.getElementById('nav-icon4')!.style.position = 'absolute'
   }
   isOpen.value = !isOpen.value
   isOpen.value ? changeSpanColorWhite() : changeSpanColorOriginal()
   menuOpen.value = !menuOpen.value
+}
+
+const menuClick = (section: string) => {
+  scrollToSection(section);
+  toggleNavIcon();
 }
 
 const scrollToSection = (id: string) => {
@@ -51,21 +56,17 @@ const scrollToSection = (id: string) => {
       <span id="item3"></span>
     </div>
   </nav>
-  <div
-    :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''"
-    class="menu-bar"
-    id="mobile-menu"
-  >
-    <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
-    <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{
+  <div :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''" class="menu-bar" id="mobile-menu">
+    <a @click.prevent="menuClick('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
+    <a @click.prevent="menuClick('expertise')" class="nav-link">{{
       t('navbar.expertise')
-    }}</a>
-    <a @click.prevent="scrollToSection('portfolio')" class="nav-link">{{
+      }}</a>
+    <a @click.prevent="menuClick('portfolio')" class="nav-link">{{
       t('navbar.portfolio')
-    }}</a>
-    <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
+      }}</a>
+    <a @click.prevent="menuClick('aboutme')" class="nav-link">{{
       t('navbar.testimonials')
-    }}</a>
+      }}</a>
   </div>
 </template>
 
@@ -160,6 +161,7 @@ nav {
     left: 8px;
   }
 }
+
 .menu_open {
   animation-duration: 0.5s;
   animation-name: menu-slidein-mobile;
@@ -180,7 +182,7 @@ nav {
   z-index: 9999;
   opacity: 0;
 
-  a{
+  a {
     font: 400 2rem roboto;
   }
 }

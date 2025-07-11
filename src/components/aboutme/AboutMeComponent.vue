@@ -28,6 +28,7 @@ section {
 
   img {
     max-width: 35.625rem;
+    transition: all 500ms ease;
   }
 
   .about-text-container {
@@ -48,6 +49,28 @@ section {
         color: var(--kmd-c-text-light);
       }
     }
+  }
+}
+
+@media(width<512px) {
+
+  section {
+    flex-direction: column;
+    padding: 0 2rem;
+
+    h3 {
+      font-size: 2.75rem !important;
+    }
+  }
+
+  img {
+    max-width: 28rem !important;
+    padding-top: 2rem;
+  }
+
+  .about-text-container {
+    gap: 2.75rem !important;
+    padding-bottom: 4rem;
   }
 }
 </style>

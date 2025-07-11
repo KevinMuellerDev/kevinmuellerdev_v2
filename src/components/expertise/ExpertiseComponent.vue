@@ -123,4 +123,10 @@ section {
     }
   }
 }
+
+@media(width<=859px) {
+  .expertise-container-item {
+    padding: 2.5rem 1.25rem 1.25rem !important;
+  }
+}
 </style>

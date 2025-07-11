@@ -63,4 +63,29 @@ const { t } = useI18n()
     gap: 18px;
   }
 }
+
+@media(width<965px) {
+  h1 {
+    font-size: 3rem !important;
+    margin-top: 0 !important;
+  }
+
+  h2 {
+    font-size: 2.875rem !important;
+  }
+}
+
+@media(width<=768px) {
+  .highlight-container {
+    align-items: center;
+    text-align: center;
+    gap: 2rem !important;
+  }
+
+  .highlight-text-container {
+    align-items: center;
+    gap: 1rem !important;
+
+  }
+}
 </style>
