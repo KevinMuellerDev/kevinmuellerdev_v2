@@ -61,5 +61,12 @@
     "halloween": {
       "text": "A simple Jump-and-Run game based on an object-oriented approach. Help Maddy to find coins and arcane orbs to fight against the zombies !"
     }
+  },
+  "testimonials": {
+    "mueller": {
+      "name": "Cathrin Müller",
+      "company": "Sturmfest - Systemische Therapie Müller",
+      "testimonial": "lorem ipsum dolor est"
+    }
   }
 }
