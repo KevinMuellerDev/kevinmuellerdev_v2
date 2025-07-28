@@ -17,10 +17,14 @@ const { t } = useI18n()
 </template>
 <style lang="css" scoped>
 #testimonials {
+  width: 100%;
+  min-height: 50rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  max-width: 1240px;
-  padding: 130px 0;
+  padding: 0 6rem;
+  gap: 3.75rem;
+  transition: all 0.5s ease;
 }
 
 .testimonials-head {
