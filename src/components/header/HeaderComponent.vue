@@ -18,7 +18,7 @@ const handleContact = () => {
   <header>
     <div class="header-left">
       <img src="../../assets/images/kevin.svg" alt="logo" />
-      <RouterLink class="nav-desktop" to="/">HOME</RouterLink>
+      <RouterLink v-if="route.path !== '/'" class="nav-desktop" to="/">HOME</RouterLink>
       <nav v-if="route.path === '/'" class="nav-desktop">
         <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about').toLocaleUpperCase() }}</a>
         <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{

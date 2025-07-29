@@ -4,6 +4,14 @@ import AboutMeComponent from '@/components/aboutme/AboutMeComponent.vue'
 import ExpertiseComponent from '@/components/expertise/ExpertiseComponent.vue'
 import PortfolioComponent from '@/components/portfolio/PortfolioComponent.vue'
 // import TestimonialsComponent from '@/components/testimonials/TestimonialsComponent.vue'
+import { useRoute } from 'vue-router'
+import { onMounted } from 'vue'
+import { scrollToSection } from '@/utils/scrollToSection'
+const route = useRoute();
+
+onMounted(async () => {
+  scrollToSection(route.hash.slice(1))
+})
 </script>
 
 <template>

@@ -1,7 +1,18 @@
 <script setup lang="ts">
 import { scrollToSection } from '@/utils/scrollToSection';
 import { useI18n } from 'vue-i18n';
+import { useRoute, useRouter } from 'vue-router';
 const { t } = useI18n();
+const route = useRoute();
+const router = useRouter();
+
+const routingManager = (path: string) => {
+  if (route.path === '/') {
+    scrollToSection(path)
+  } else {
+    router.push(`/#${path}`)
+  }
+}
 </script>
 
 <template>
@@ -18,10 +29,11 @@ const { t } = useI18n();
       <div class="footer-links-container">
         <span class="footer-head">Links:</span>
         <div>
-          <a @click.prevent="scrollToSection('aboutme')">{{ t('navbar.about') }}</a>
-          <a @click.prevent="scrollToSection('expertise')">{{ t('navbar.expertise') }}</a>
-          <a @click.prevent="scrollToSection('portfolio')">{{ t('navbar.portfolio') }}</a>
-          <a @click.prevent="scrollToSection('aboutme')">{{ t('navbar.testimonials') }}</a>
+
+          <a @click.prevent="routingManager('aboutme')">{{ t('navbar.about') }}</a>
+          <a @click.prevent="routingManager('expertise')">{{ t('navbar.expertise') }}</a>
+          <a @click.prevent="routingManager('portfolio')">{{ t('navbar.portfolio') }}</a>
+          <a @click.prevent="routingManager('aboutme')">{{ t('navbar.testimonials') }}</a>
           <RouterLink class="privacy" to="/privacypolicy">Privacy policy</RouterLink>
           <RouterLink to="/imprint">Impressum</RouterLink>
         </div>
