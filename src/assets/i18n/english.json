@@ -1,9 +1,9 @@
 {
   "navbar": {
-    "about": "ABOUT ME",
-    "expertise": "EXPERTISE",
-    "portfolio": "PORTFOLIO",
-    "testimonials": "TESTMINONIAL"
+    "about": "About me",
+    "expertise": "Expertise",
+    "portfolio": "Portfolio",
+    "testimonials": "Testimonial"
   },
   "button": {
     "contactme": "Contact Me",

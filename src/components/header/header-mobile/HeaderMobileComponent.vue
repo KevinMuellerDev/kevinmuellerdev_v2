@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
 
 const { t } = useI18n()
 const isOpen = ref(false)
 const menuOpen = ref(false)
 const allowCloseAnimation = ref(false)
 
-const changeSpanColorWhite = () => {
+
+const changeSpanColorWhite: () => void = () => {
   document.getElementById('item1')!.style.background = 'white'
   document.getElementById('item2')!.style.background = 'white'
   document.getElementById('item3')!.style.background = 'white'
 }
 
-const changeSpanColorOriginal = () => {
+const changeSpanColorOriginal: () => void = () => {
   document.getElementById('item1')!.style.background = '#a3a3a3'
   document.getElementById('item2')!.style.background = '#a3a3a3'
   document.getElementById('item3')!.style.background = '#a3a3a3'
@@ -22,16 +24,23 @@ const changeSpanColorOriginal = () => {
 const toggleNavIcon = () => {
   if (!menuOpen.value) {
     allowCloseAnimation.value = true
-    document.getElementById('slider')!.style.zIndex = '0'
+    if (document.getElementById('slider') !== null)
+      document.getElementById('slider')!.style.zIndex = '0'
     document.getElementById('mobile-menu')!.style.display = 'flex'
     document.getElementById('nav-icon4')!.style.position = 'fixed'
   } else {
-    document.getElementById('slider')!.style.zIndex = '10'
+    if (document.getElementById('slider') !== null)
+      document.getElementById('slider')!.style.zIndex = '10'
     document.getElementById('mobile-menu')!.style.display = 'none'
     document.getElementById('nav-icon4')!.style.position = 'absolute'
+
   }
-  isOpen.value = !isOpen.value
-  isOpen.value ? changeSpanColorWhite() : changeSpanColorOriginal()
+  isOpen.value = !isOpen.value;
+  if (isOpen.value) {
+    changeSpanColorWhite()
+  } else {
+    changeSpanColorOriginal()
+  }
   menuOpen.value = !menuOpen.value
 }
 
@@ -57,16 +66,19 @@ const scrollToSection = (id: string) => {
     </div>
   </nav>
   <div :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''" class="menu-bar" id="mobile-menu">
-    <a @click.prevent="menuClick('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
-    <a @click.prevent="menuClick('expertise')" class="nav-link">{{
+    <RouterLink @click="toggleNavIcon" to="/">Home</RouterLink>
+    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
+    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('expertise')" class="nav-link">{{
       t('navbar.expertise')
-      }}</a>
-    <a @click.prevent="menuClick('portfolio')" class="nav-link">{{
+    }}</a>
+    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('portfolio')" class="nav-link">{{
       t('navbar.portfolio')
-      }}</a>
-    <a @click.prevent="menuClick('aboutme')" class="nav-link">{{
+    }}</a>
+    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('aboutme')" class="nav-link">{{
       t('navbar.testimonials')
-      }}</a>
+    }}</a>
+    <RouterLink class="privacy" @click="toggleNavIcon" to="/privacypolicy">Privacy policy</RouterLink>
+    <RouterLink @click="toggleNavIcon" to="/imprint">Impressum</RouterLink>
   </div>
 </template>
 
@@ -185,6 +197,10 @@ nav {
   a {
     font: 400 2rem roboto;
   }
+}
+
+.privacy {
+  margin-top: 4rem;
 }
 
 @keyframes menu-slidein-mobile {

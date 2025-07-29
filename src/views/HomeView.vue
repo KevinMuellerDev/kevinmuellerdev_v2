@@ -3,7 +3,7 @@ import HeroComponent from '@/components/hero/HeroComponent.vue'
 import AboutMeComponent from '@/components/aboutme/AboutMeComponent.vue'
 import ExpertiseComponent from '@/components/expertise/ExpertiseComponent.vue'
 import PortfolioComponent from '@/components/portfolio/PortfolioComponent.vue'
-import TestimonialsComponent from '@/components/testimonials/TestimonialsComponent.vue'
+// import TestimonialsComponent from '@/components/testimonials/TestimonialsComponent.vue'
 </script>
 
 <template>
@@ -12,6 +12,6 @@ import TestimonialsComponent from '@/components/testimonials/TestimonialsCompone
     <AboutMeComponent />
     <ExpertiseComponent />
     <PortfolioComponent />
-    <TestimonialsComponent />
+    <!-- <TestimonialsComponent /> -->
   </main>
 </template>

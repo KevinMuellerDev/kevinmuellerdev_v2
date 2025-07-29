@@ -1,37 +1,35 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { scrollToSection } from '@/utils/scrollToSection'
+import { useRoute } from 'vue-router'
 import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
 import HeaderMobileComponent from './header-mobile/HeaderMobileComponent.vue'
 
-const { t } = useI18n()
+const { t } = useI18n();
+const route = useRoute();
 
 const handleContact = () => {
   console.log('clicked')
 }
 
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 </script>
 
 <template>
   <header>
     <div class="header-left">
-      <img class="" src="../../assets/images/kevin.svg" alt="logo" />
-      <nav class="nav-desktop">
-        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
+      <img src="../../assets/images/kevin.svg" alt="logo" />
+      <RouterLink class="nav-desktop" to="/">HOME</RouterLink>
+      <nav v-if="route.path === '/'" class="nav-desktop">
+        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about').toLocaleUpperCase() }}</a>
         <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{
-          t('navbar.expertise')
-        }}</a>
+          t('navbar.expertise').toLocaleUpperCase()
+          }}</a>
         <a @click.prevent="scrollToSection('portfolio')" class="nav-link">{{
-          t('navbar.portfolio')
-        }}</a>
+          t('navbar.portfolio').toLocaleUpperCase()
+          }}</a>
         <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
-          t('navbar.testimonials')
-        }}</a>
+          t('navbar.testimonials').toLocaleUpperCase()
+          }}</a>
       </nav>
     </div>
     <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="handleContact" />
