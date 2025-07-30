@@ -13,7 +13,7 @@ import HeroHighlightComponent from '@/components/hero/herohighlight/HeroHighligh
 <style lang="scss" scoped>
 section {
   position: relative;
-  background: url('@/assets/images/dummyheader.png');
+  background: url('@/assets/images/dummyheader.webp');
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -30,15 +30,13 @@ section {
     height: 200px;
     transition: all 400ms ease;
     width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(34, 34, 34, 1) 0%,
-      rgba(34, 34, 34, 0.82) 43%,
-      rgba(34, 34, 34, 0.63) 52%,
-      rgba(34, 34, 34, 0.48) 60%,
-      rgba(34, 34, 34, 0.33) 77%,
-      rgba(34, 34, 34, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(34, 34, 34, 1) 0%,
+        rgba(34, 34, 34, 0.82) 43%,
+        rgba(34, 34, 34, 0.63) 52%,
+        rgba(34, 34, 34, 0.48) 60%,
+        rgba(34, 34, 34, 0.33) 77%,
+        rgba(34, 34, 34, 0) 100%);
   }
 }
 </style>

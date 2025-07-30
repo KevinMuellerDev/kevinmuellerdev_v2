@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import PrivacyView from '@/views/PrivacyView.vue'
-import ImpressumView from '@/views/ImpressumView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,14 +12,18 @@ const router = createRouter({
     {
       path: '/privacypolicy',
       name: 'privacypolicy',
-      component: PrivacyView,
+      component: () => import('@/views/PrivacyView.vue'),
     },
     {
       path: '/imprint',
       name: 'imprint',
-      component: ImpressumView,
+      component: () => import('@/views/ImpressumView.vue'),
     },
   ],
+  scrollBehavior(to) {
+    if (to.hash) return false
+    return { top: 0 }
+  },
 })
 
 export default router

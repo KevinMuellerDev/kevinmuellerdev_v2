@@ -2,9 +2,11 @@
 import { scrollToSection } from '@/utils/scrollToSection';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
+
 const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
+
 
 const routingManager = (path: string) => {
   if (route.path === '/') {
