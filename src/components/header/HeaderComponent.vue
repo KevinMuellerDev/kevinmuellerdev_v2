@@ -5,13 +5,12 @@ import { useRoute } from 'vue-router'
 import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
 import HeaderMobileComponent from './header-mobile/HeaderMobileComponent.vue'
 
-const { t } = useI18n();
-const route = useRoute();
+const { t } = useI18n()
+const route = useRoute()
 
 const handleContact = () => {
-  console.log('clicked')
+  scrollToSection('contact')
 }
-
 </script>
 
 <template>
@@ -20,16 +19,18 @@ const handleContact = () => {
       <img src="../../assets/images/kevin.svg" alt="logo" />
       <RouterLink v-if="route.path !== '/'" class="nav-desktop" to="/">HOME</RouterLink>
       <nav v-if="route.path === '/'" class="nav-desktop">
-        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{ t('navbar.about').toLocaleUpperCase() }}</a>
+        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
+          t('navbar.about').toLocaleUpperCase()
+        }}</a>
         <a @click.prevent="scrollToSection('expertise')" class="nav-link">{{
           t('navbar.expertise').toLocaleUpperCase()
-          }}</a>
+        }}</a>
         <a @click.prevent="scrollToSection('portfolio')" class="nav-link">{{
           t('navbar.portfolio').toLocaleUpperCase()
-          }}</a>
-        <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
+        }}</a>
+        <!-- <a @click.prevent="scrollToSection('aboutme')" class="nav-link">{{
           t('navbar.testimonials').toLocaleUpperCase()
-          }}</a>
+        }}</a> -->
       </nav>
     </div>
     <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="handleContact" />

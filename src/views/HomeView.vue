@@ -7,7 +7,8 @@ import PortfolioComponent from '@/components/portfolio/PortfolioComponent.vue'
 import { useRoute } from 'vue-router'
 import { onMounted } from 'vue'
 import { scrollToSection } from '@/utils/scrollToSection'
-const route = useRoute();
+import ContactComponent from '@/components/contact/ContactComponent.vue'
+const route = useRoute()
 
 onMounted(async () => {
   scrollToSection(route.hash.slice(1))
@@ -21,5 +22,6 @@ onMounted(async () => {
     <ExpertiseComponent />
     <PortfolioComponent />
     <!-- <TestimonialsComponent /> -->
+    <ContactComponent />
   </main>
 </template>

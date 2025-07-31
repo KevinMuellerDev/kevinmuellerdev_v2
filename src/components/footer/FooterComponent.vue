@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { scrollToSection } from '@/utils/scrollToSection';
-import { useI18n } from 'vue-i18n';
-import { useRoute, useRouter } from 'vue-router';
+import { scrollToSection } from '@/utils/scrollToSection'
+import { useI18n } from 'vue-i18n'
+import { useRoute, useRouter } from 'vue-router'
 
-const { t } = useI18n();
-const route = useRoute();
-const router = useRouter();
-
+const { t } = useI18n()
+const route = useRoute()
+const router = useRouter()
 
 const routingManager = (path: string) => {
   if (route.path === '/') {
@@ -31,7 +30,6 @@ const routingManager = (path: string) => {
       <div class="footer-links-container">
         <span class="footer-head">Links:</span>
         <div>
-
           <a @click.prevent="routingManager('aboutme')">{{ t('navbar.about') }}</a>
           <a @click.prevent="routingManager('expertise')">{{ t('navbar.expertise') }}</a>
           <a @click.prevent="routingManager('portfolio')">{{ t('navbar.portfolio') }}</a>
@@ -39,7 +37,6 @@ const routingManager = (path: string) => {
           <RouterLink class="privacy" to="/privacypolicy">Privacy policy</RouterLink>
           <RouterLink to="/imprint">Impressum</RouterLink>
         </div>
-
       </div>
     </div>
     <div class="footer-bottom-container">

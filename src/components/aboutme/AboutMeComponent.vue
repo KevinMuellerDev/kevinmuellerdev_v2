@@ -52,8 +52,7 @@ section {
   }
 }
 
-@media(width<512px) {
-
+@media (width<800px) {
   section {
     flex-direction: column;
     padding: 0 2rem;

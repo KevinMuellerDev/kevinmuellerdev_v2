@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { scrollToSection } from '@/utils/scrollToSection'
 import ButtonWhite from '@/components/buttons/ButtonWhite.vue'
 import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
 
 const { t } = useI18n()
+
+
 </script>
 
 <template>
@@ -16,8 +19,8 @@ const { t } = useI18n()
       <span class="highlight-text">{{ t('landing.slogan') }}</span>
     </div>
     <div class="highlight-button-container">
-      <ButtonWhite :text="t('button.explore')" />
-      <ButtonTransparent :text="t('button.hire')" />
+      <ButtonWhite @click="scrollToSection('portfolio')" :text="t('button.explore')" />
+      <ButtonTransparent @click="scrollToSection('contact')" :text="t('button.hire')" />
     </div>
   </div>
 </template>
@@ -64,7 +67,7 @@ const { t } = useI18n()
   }
 }
 
-@media(width<965px) {
+@media (width<965px) {
   h1 {
     font-size: 3rem !important;
     margin-top: 0 !important;
@@ -75,7 +78,7 @@ const { t } = useI18n()
   }
 }
 
-@media(width<=768px) {
+@media (width<=768px) {
   .highlight-container {
     align-items: center;
     text-align: center;
@@ -85,7 +88,6 @@ const { t } = useI18n()
   .highlight-text-container {
     align-items: center;
     gap: 1rem !important;
-
   }
 }
 </style>

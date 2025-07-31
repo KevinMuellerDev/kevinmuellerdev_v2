@@ -1,40 +1,77 @@
-# KevinMuellerDev
+# Kevin Mueller Dev Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the source code for [Kevin Mueller's](https://kevinmueller.dev) personal developer portfolio.  
+It is a modern, modular Vue 3 application with TypeScript, SCSS, and EmailJS integration for contact functionality.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- ✨ **Vue 3 + TypeScript**: Modern, type-safe frontend
+- 🎨 **SCSS Styling**: Custom, responsive design
+- 📬 **Contact Form**: EmailJS-powered, with validation and feedback overlay
+- 🧩 **Modular Components**: Reusable UI building blocks
+- ⚡ **Fast & Responsive**: Optimized for all devices
 
-## Type Support for `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Prerequisites
 
-## Customize configuration
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Installation
 
-## Project Setup
-
-```sh
+```bash
+git clone https://github.com/kevinmuellerdev/kevinmuellerdev_v2.git
+cd kevinmuellerdev_v2
 npm install
+# or
+yarn install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
-```sh
+```bash
 npm run dev
+# or
+yarn dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Open [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal) to view the app.
 
-```sh
+### Build for Production
+
+```bash
 npm run build
+# or
+yarn build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Project Structure
 
-```sh
-npm run lint
 ```
-# kevinmuellerdev_v2
+src/
+  assets/         # Images, fonts, etc.
+  components/     # Vue components (contact, buttons, base, etc.)
+  composables/    # Reusable logic (e.g. useContactForm)
+  utils/          # Utility functions (e.g. sendMail.ts)
+  App.vue
+  main.ts
+```
+
+## Contact Form
+
+- Uses [EmailJS](https://www.emailjs.com/) for sending messages.
+- Includes validation, loading spinner, and error/success feedback.
+
+## Customization
+
+- Update your contact details in `src/components/contact/ContactComponent.vue`.
+- Adjust styles in `src/assets` and component SCSS blocks.
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+> Built with ❤️ by [Kevin Mueller](https://kevinmueller.dev)

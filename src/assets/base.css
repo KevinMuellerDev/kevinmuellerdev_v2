@@ -17,6 +17,7 @@
   --kmd-c-text-light-opacity-90: rgba(255, 255, 255, 0.7);
   --kmd-c-button-light: #ffffff;
   --kmd-c-border: rgba(255, 255, 255, 0.3);
+  --kmd-c-background-light: rgba(255, 255, 255, 0.02);
 }
 
 /* inter-300 - latin */

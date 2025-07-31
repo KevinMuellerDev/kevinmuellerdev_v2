@@ -8,7 +8,6 @@ const isOpen = ref(false)
 const menuOpen = ref(false)
 const allowCloseAnimation = ref(false)
 
-
 const changeSpanColorWhite: () => void = () => {
   document.getElementById('item1')!.style.background = 'white'
   document.getElementById('item2')!.style.background = 'white'
@@ -33,9 +32,8 @@ const toggleNavIcon = () => {
       document.getElementById('slider')!.style.zIndex = '10'
     document.getElementById('mobile-menu')!.style.display = 'none'
     document.getElementById('nav-icon4')!.style.position = 'absolute'
-
   }
-  isOpen.value = !isOpen.value;
+  isOpen.value = !isOpen.value
   if (isOpen.value) {
     changeSpanColorWhite()
   } else {
@@ -45,8 +43,8 @@ const toggleNavIcon = () => {
 }
 
 const menuClick = (section: string) => {
-  scrollToSection(section);
-  toggleNavIcon();
+  scrollToSection(section)
+  toggleNavIcon()
 }
 
 const scrollToSection = (id: string) => {
@@ -65,9 +63,15 @@ const scrollToSection = (id: string) => {
       <span id="item3"></span>
     </div>
   </nav>
-  <div :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''" class="menu-bar" id="mobile-menu">
+  <div
+    :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''"
+    class="menu-bar"
+    id="mobile-menu"
+  >
     <RouterLink @click="toggleNavIcon" to="/">Home</RouterLink>
-    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('aboutme')" class="nav-link">{{ t('navbar.about') }}</a>
+    <a v-if="useRoute().path === '/'" @click.prevent="menuClick('aboutme')" class="nav-link">{{
+      t('navbar.about')
+    }}</a>
     <a v-if="useRoute().path === '/'" @click.prevent="menuClick('expertise')" class="nav-link">{{
       t('navbar.expertise')
     }}</a>
@@ -77,7 +81,9 @@ const scrollToSection = (id: string) => {
     <a v-if="useRoute().path === '/'" @click.prevent="menuClick('aboutme')" class="nav-link">{{
       t('navbar.testimonials')
     }}</a>
-    <RouterLink class="privacy" @click="toggleNavIcon" to="/privacypolicy">Privacy policy</RouterLink>
+    <RouterLink class="privacy" @click="toggleNavIcon" to="/privacypolicy"
+      >Privacy policy</RouterLink
+    >
     <RouterLink @click="toggleNavIcon" to="/imprint">Impressum</RouterLink>
   </div>
 </template>
