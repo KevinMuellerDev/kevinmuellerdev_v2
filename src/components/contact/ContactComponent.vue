@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import { sendMessage } from '@/utils/sendMail'
 import ButtonWhite from '../buttons/ButtonWhite.vue'
+const { t } = useI18n()
+
+//TODO: Test mobile responsiveness and switching between different sizes.
 
 const formRef = ref<HTMLFormElement | null>(null)
 const formData = ref({
@@ -15,15 +19,15 @@ const loading = ref(false)
 const errorMsg = ref('')
 
 const showOverlay = ref(false)
-const overlayText = ref('Sende Nachricht...')
+const overlayText = ref(t('email.sending'))
 
 const validateForm = () => {
   if (!formData.value.name || !formData.value.email || !formData.value.message) {
-    errorMsg.value = 'Bitte alle Felder ausfüllen.'
+    errorMsg.value = t('email.fillAll')
     return false
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.value.email)) {
-    errorMsg.value = 'Bitte eine gültige E-Mail-Adresse eingeben.'
+    errorMsg.value = t('email.fillEmail')
     return false
   }
   errorMsg.value = ''
@@ -35,16 +39,16 @@ const handleSubmit = async () => {
 
   loading.value = true
   showOverlay.value = true
-  overlayText.value = 'Sende Nachricht...'
+  overlayText.value = t('email.sending')
 
   const result = await sendMessage(formData.value)
   loading.value = false
 
   if (result) {
-    overlayText.value = 'Nachricht erfolgreich gesendet!'
+    overlayText.value = t('email.success')
     formData.value = { to_name: 'Kevin Mueller', name: '', email: '', message: '' }
   } else {
-    overlayText.value = 'Senden fehlgeschlagen. Bitte später erneut versuchen.'
+    overlayText.value = t('email.failed')
   }
 
   setTimeout(() => {
@@ -71,7 +75,11 @@ const triggerSubmit = () => {
         <form ref="formRef" @submit.prevent="handleSubmit">
           <input placeholder="Your Name..." v-model="formData.name" type="text" />
           <input placeholder="Your Email..." v-model="formData.email" type="email" />
-          <textarea maxlength="500" placeholder="Deine Nachricht..." v-model="formData.message"></textarea>
+          <textarea
+            maxlength="500"
+            placeholder="Deine Nachricht..."
+            v-model="formData.message"
+          ></textarea>
           <ButtonWhite :disabled="loading" @click="triggerSubmit" text="Contact Me" />
         </form>
 

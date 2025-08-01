@@ -68,5 +68,12 @@
       "company": "Sturmfest - Systemische Therapie Müller",
       "testimonial": "lorem ipsum dolor est"
     }
+  },
+  "email": {
+    "sending": "Sending message...",
+    "success": "Sending message succeeded!",
+    "failed": "Sending failed. Please try again later.",
+    "fillAll": "All fields have to be filled.",
+    "fillEmail": "Please provide a valid email address"
   }
 }
