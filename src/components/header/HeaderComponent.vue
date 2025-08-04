@@ -2,15 +2,23 @@
 import { useI18n } from 'vue-i18n'
 import { scrollToSection } from '@/utils/scrollToSection'
 import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 import ButtonTransparent from '@/components/buttons/ButtonTransparent.vue'
 import HeaderMobileComponent from './header-mobile/HeaderMobileComponent.vue'
 
-const { t } = useI18n()
-const route = useRoute()
+const { t } = useI18n();
+const route = useRoute();
+const router = useRouter();
 
-const handleContact = () => {
-  scrollToSection('contact')
-}
+
+const routingManager = (path: string) => {
+  if (route.path === '/') {
+    scrollToSection(path)
+  } else {
+    router.push(`/#${path}`)
+  }
+};
+
 </script>
 
 <template>
@@ -33,7 +41,7 @@ const handleContact = () => {
         }}</a> -->
       </nav>
     </div>
-    <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="handleContact" />
+    <ButtonTransparent class="nav-desktop" :text="t('button.contactme')" @click="routingManager('contact')" />
     <HeaderMobileComponent />
   </header>
 </template>

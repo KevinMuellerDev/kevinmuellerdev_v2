@@ -19,6 +19,12 @@ const router = createRouter({
       name: 'imprint',
       component: () => import('@/views/ImpressumView.vue'),
     },
+
+    {
+      path: '/:catchAll(.*)*',
+      name: 'notfound',
+      component: () => import('@/views/404View.vue'),
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) return false
