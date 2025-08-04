@@ -24,7 +24,7 @@ const redirectTo = (url: string) => {
         <img :src="project.image" alt="" />
         <div class="article-text-container">
           <div class="article-text-headline-container">
-            <h5>{{ project.title }}</h5>
+            <h4>{{ project.title }}</h4>
             <span>{{ project.stack }}</span>
           </div>
           <span>{{ t(project.description) }}</span>
@@ -117,8 +117,8 @@ section {
             color: var(--kmd-c-accent);
           }
 
-          h5 {
-            font: 400 1.75rem Michroma;
+          h4 {
+            font: 400 1.75rem Michroma !important;
             color: var(--kmd-c-text-light);
             line-height: 26px;
           }

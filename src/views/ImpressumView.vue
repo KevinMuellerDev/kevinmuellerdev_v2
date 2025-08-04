@@ -1,3 +1,33 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue';
+
+useHead({
+  title: 'Impressum | KevinMuellerDev',
+  meta: [
+    { name: 'description', content: 'Kevin Müller - Fullstack Developer bei KevinMuellerDev. Spezialisiert auf moderne Frontend- und Backend-Technologien für effiziente Webprojekte.' },
+    { name: 'creator', content: 'https://www.kevin-mueller-dev.de' },
+    { name: 'keywords', content: 'Fullstack Developer, Kevin Müller, KevinMuellerDev, Webentwicklung, Softwareentwicklung, Vue.js, Angular, React, TypeScript, JavaScript, HTML, CSS, Django, Python, REST API, Firebase, PostgreSQL, Redis, Docker, Git, moderne Webanwendungen, Frontend, Backend, API-Entwicklung, skalierbare Systeme, Single Page Applications, Web Apps, Cloud Lösungen, Freelancer Webentwicklung, professionelle Softwareentwicklung' },
+    { property: 'og:url', content: 'https://www.kevin-mueller-dev.de' },
+    { property: 'og:title', content: 'Home | KevinMuellerDev' },
+    { property: 'og:site_name', content: 'KevinMuellerDev' },
+    { property: 'og:locale', content: 'de' },
+    { property: 'og:description', content: 'Kevin Müller - Fullstack Developer bei KevinMuellerDev. Spezialisiert auf moderne Frontend- und Backend-Technologien für effiziente Webprojekte.' },
+    { property: 'og:image', content: '/favicon.png' },
+    { property: 'og:image:width', content: '226' },
+    { property: 'og:image:height', content: '220' },
+    { property: 'og:type', content: 'website' },
+    { property: 'twitter:title', content: 'Home | KevinMuellerDev' },
+    { property: 'twitter:description', content: 'Kevin Müller - Fullstack Developer bei KevinMuellerDev. Spezialisiert auf moderne Frontend- und Backend-Technologien für effiziente Webprojekte.' },
+    { property: 'twitter:image', content: '/favicon.png' },
+    { property: 'twitter:card', content: 'summary_large_image' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.kevin-mueller-dev.de' },
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+  ]
+})
+</script>
+
 <template>
   <div class="impressum-wrapper">
     <div class="header-1">
@@ -22,9 +52,7 @@
           Telefon: <a href="tel:+4917662817991">0176/628 179 91</a><br />
           Fax: 0231 610 312 70<br />
           E-Mail:
-          <a href="mailto:info@systemische-therapie-mueller.de"
-            >info@systemische-therapie-mueller.de</a
-          >
+          <a href="mailto:info@systemische-therapie-mueller.de">info@systemische-therapie-mueller.de</a>
         </p>
         <p>Steuernummer: 332/5009/3348</p>
       </div>
@@ -96,9 +124,7 @@
     <div class="impressum-section">
       <p>
         Quelle:
-        <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
-          >https://www.e-recht24.de</a
-        >
+        <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer">https://www.e-recht24.de</a>
       </p>
     </div>
   </div>
