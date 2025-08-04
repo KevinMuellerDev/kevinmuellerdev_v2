@@ -1,0 +1,12 @@
+# robots.txt für https://www.kevin-mueller-dev.de
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap für bessere Indexierung
+Sitemap: https://www.kevin-mueller-dev.de/sitemap.xml
+
+# Crawl-Delay (optional, falls Server entlastet werden soll)
+# Crawl-delay: 5

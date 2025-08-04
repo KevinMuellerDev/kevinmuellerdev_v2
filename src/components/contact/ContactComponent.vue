@@ -72,14 +72,11 @@ const triggerSubmit = () => {
           <p>Ready to Collaborate?</p>
           Let's Turn Your Ideas into reality!
         </h3>
-        <form ref="formRef" @submit.prevent="handleSubmit">
-          <input placeholder="Your Name..." v-model="formData.name" type="text" />
-          <input placeholder="Your Email..." v-model="formData.email" type="email" />
-          <textarea
-            maxlength="500"
-            placeholder="Deine Nachricht..."
-            v-model="formData.message"
-          ></textarea>
+        <form name="contact-form" ref="formRef" @submit.prevent="handleSubmit">
+          <input name="contact-name-input" placeholder="Your Name..." v-model="formData.name" type="text" />
+          <input name="contact-mail-input" placeholder="Your Email..." v-model="formData.email" type="email" />
+          <textarea name="contact-message-input" maxlength="500" placeholder="Deine Nachricht..."
+            v-model="formData.message"></textarea>
           <ButtonWhite :disabled="loading" @click="triggerSubmit" text="Contact Me" />
         </form>
 
@@ -228,11 +225,13 @@ section {
     }
 
     @keyframes l32-1 {
+
       0%,
       100% {
         width: 45px;
         height: 45px;
       }
+
       35%,
       65% {
         width: 65px;
@@ -241,6 +240,7 @@ section {
     }
 
     @keyframes l32-2 {
+
       0%,
       40% {
         background-position:
@@ -254,6 +254,7 @@ section {
           50% 0,
           50% 50%;
       }
+
       60%,
       100% {
         background-position:

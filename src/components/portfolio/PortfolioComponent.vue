@@ -14,10 +14,10 @@ const redirectTo = (url: string) => {
   <section id="portfolio">
     <div class="section-header">
       <h3>{{ t('portfolio.header.headline') }}</h3>
-      <div class="section-header-cta">
+      <!-- <div class="section-header-cta">
         <span>{{ t('portfolio.header.cta') }}</span>
         <ButtonTransparent :text="t('button.viewmore')" />
-      </div>
+      </div> -->
     </div>
     <div class="article-container">
       <article v-for="(project, index) in portfolioData" :key="index">
@@ -31,11 +31,8 @@ const redirectTo = (url: string) => {
           <div class="article-button-container">
             <ButtonWhite text="Live Test" @click="redirectTo(project.liveUrl)" />
             <ButtonTransparent text="GitHub" @click="redirectTo(project.githubUrl)" />
-            <ButtonTransparent
-              v-if="project.githubUrl2"
-              text="GitHub Backend"
-              @click="redirectTo(project.githubUrl2)"
-            />
+            <ButtonTransparent v-if="project.githubUrl2" text="GitHub Backend"
+              @click="redirectTo(project.githubUrl2)" />
           </div>
         </div>
       </article>
@@ -59,7 +56,7 @@ section {
     display: flex;
     width: 100%;
     padding: 0 20px;
-    justify-content: space-between;
+    justify-content: center;
 
     h3 {
       font: 400 3.125rem Michroma;
