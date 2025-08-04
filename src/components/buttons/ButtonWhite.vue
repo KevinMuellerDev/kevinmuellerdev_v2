@@ -26,6 +26,7 @@ const props = defineProps(['text'])
   user-select: none;
   -webkit-user-select: none;
 
+
   &:hover {
     color: var(--kmd-c-text-light);
     background-position: right;

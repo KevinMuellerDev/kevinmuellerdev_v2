@@ -28,6 +28,7 @@ const props = defineProps({
   user-select: none;
   -webkit-user-select: none;
 
+
   &:hover {
     color: var(--kmd-c-background);
     background-position: left;

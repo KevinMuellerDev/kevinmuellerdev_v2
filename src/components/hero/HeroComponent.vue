@@ -27,18 +27,16 @@ section {
     content: '';
     position: absolute;
     bottom: 0;
-    height: 200px;
+    height: 150px;
     transition: all 400ms ease;
     width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(34, 34, 34, 1) 0%,
-      rgba(34, 34, 34, 0.82) 43%,
-      rgba(34, 34, 34, 0.63) 52%,
-      rgba(34, 34, 34, 0.48) 60%,
-      rgba(34, 34, 34, 0.33) 77%,
-      rgba(34, 34, 34, 0) 100%
-    );
+    background: linear-gradient(0deg,
+        rgba(34, 34, 34, 1) 0%,
+        rgba(34, 34, 34, 0.82) 43%,
+        rgba(34, 34, 34, 0.63) 52%,
+        rgba(34, 34, 34, 0.48) 60%,
+        rgba(34, 34, 34, 0.33) 77%,
+        rgba(34, 34, 34, 0) 100%);
   }
 }
 </style>

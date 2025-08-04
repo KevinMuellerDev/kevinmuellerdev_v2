@@ -37,24 +37,23 @@ useHead({
       <div class="impressum-section">
         <h3>Angaben gemäß § 5 TMG</h3>
         <p>
-          <strong>Sturmfest - Systemische Familientherapie Cathrin Müller</strong><br />
-          Cathrin Müller<br />
+          <strong>KevinMuellerDev</strong><br />
+          Kevin Müller<br />
           Christine-Teusch-Bogen 47<br />
           44329 Dortmund<br />
           Deutschland
         </p>
-        <p>Vertreten durch: <strong>Cathrin Müller</strong></p>
+        <p>Vertreten durch: <strong>Kevin Müller</strong></p>
       </div>
 
       <div class="impressum-section">
         <h3>Kontakt</h3>
         <p>
-          Telefon: <a href="tel:+4917662817991">0176/628 179 91</a><br />
-          Fax: 0231 610 312 70<br />
+          Telefon: <a href="tel:+4915153962240">0151/539 622 40</a><br />
           E-Mail:
-          <a href="mailto:info@systemische-therapie-mueller.de">info@systemische-therapie-mueller.de</a>
+          <a href="mailto:info@kevin-mueller-dev.de">info@kevin-mueller-dev.de</a>
         </p>
-        <p>Steuernummer: 332/5009/3348</p>
+        <p>Steuernummer: 317/5135/4084</p>
       </div>
     </div>
     <div class="impressum-section">
